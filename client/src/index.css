@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+*{
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+}
+
+@theme{
+  --color-primary:#4fbf8b;
+  --color-primary-dull:#44ae7c;
+}
+
+.container{
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}

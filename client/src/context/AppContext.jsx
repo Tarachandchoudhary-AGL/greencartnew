@@ -12,6 +12,8 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({children}) => {
 
+    console.log(children);
+    
     const currency = import.meta.env.VITE_CURRENCY;
     const navigate = useNavigate();
     const [user, setUser] = useState(null);

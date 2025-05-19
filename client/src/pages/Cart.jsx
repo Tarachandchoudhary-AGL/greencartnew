@@ -63,17 +63,17 @@ function Cart() {
             }else{
 
                 //Place order with stripe
-                const {data} = await axios.post('/api/order/stripe', {
-                    userId:user._id,
-                    items:cartArray.map(item => ({product:item._id, quantity:item.quantity})),
-                    address:selectedAddress._id
-                })
+                // const {data} = await axios.post('/api/order/stripe', {
+                //     userId:user._id,
+                //     items:cartArray.map(item => ({product:item._id, quantity:item.quantity})),
+                //     address:selectedAddress._id
+                // })
 
-                if(data.success){
-                    window.location.replace(data.url)
-                }else{
-                    toast.error(data.message)
-                }
+                // if(data.success){
+                //     window.location.replace(data.url)
+                // }else{
+                //     toast.error(data.message)
+                // }
             }
 
         } catch (error) {

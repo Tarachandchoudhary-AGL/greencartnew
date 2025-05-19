@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { assets } from '../assets/assets';
 import { useAppContext } from '../context/AppContext';
+import { FiHeart } from "react-icons/fi";
+
 
 function ProductCard({product}) {
     const {currency, addToCart, updateCartItem, removeFromCart, cartItems, navigate} = useAppContext();
@@ -9,7 +11,10 @@ function ProductCard({product}) {
         <div onClick={()=> {
             navigate(`/products/${product.category.toLowerCase()}/${product._id}`); 
             scrollTo(0,0)
-        }} className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white">
+        }} className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white relative">
+            <div className='w-10 h-10 text-lg flex items-center justify-center rounded-full bg-white shadow-md cursor-pointer absolute right-3'>
+                <FiHeart className='text-gray-500 size-5'/>
+            </div>
             <div className="group cursor-pointer flex items-center justify-center px-2">
                 <img className="group-hover:scale-105 transition max-w-26 md:max-w-36" src={product.image[0]} alt={product.name} />
             </div>
